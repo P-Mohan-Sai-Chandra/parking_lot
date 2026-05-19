@@ -2,6 +2,8 @@ package com.target20.parking_lot.Models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -22,8 +24,10 @@ public class Ticket extends  BaseModel {
     @ManyToOne
     private Gate gate;
 
-
-    private List<AddOnService> addOnServiceList;
-    private String chargingPointPassCode;
+    @OneToMany
+    private List<AddOnServiceOrder> addOnServiceList;
+    private boolean vehicleChargingRequired;
+    @OneToOne
+    private ChargerDetails chargerDetails;
 
 }

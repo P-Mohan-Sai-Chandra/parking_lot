@@ -1,5 +1,6 @@
 package com.target20.parking_lot.Models;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
@@ -15,6 +16,7 @@ import java.util.List;
 public class ParkingSlot extends  BaseModel {
 
     private String slotNumber;
+    @ElementCollection
     private List<VehicleType> supportedVehicles;
     private OperationalStatus status;
     private ParkingSlotStatus slotStatus;

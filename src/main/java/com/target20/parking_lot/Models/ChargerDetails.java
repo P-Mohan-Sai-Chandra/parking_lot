@@ -9,10 +9,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class AddOnService extends  BaseModel {
-
-    private AddOnServiceName serviceName;
-    private double servicePrice;
-    private ServiceAvailability serviceStatus;
-
+public class ChargerDetails extends BaseModel {
+    private String otp;
+    private double currentUnits;
 }

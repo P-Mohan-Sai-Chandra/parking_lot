@@ -1,6 +1,7 @@
 package com.target20.parking_lot.Models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -9,10 +10,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class AddOnService extends  BaseModel {
+public class AddOnServiceOrder extends BaseModel {
 
-    private AddOnServiceName serviceName;
-    private double servicePrice;
-    private ServiceAvailability serviceStatus;
+    @ManyToOne
+    private AddOnService serviceOpted;
+    private double orderedPrice;
+
 
 }
