@@ -20,7 +20,7 @@ public class ParkingSlot extends  BaseModel {
     private List<VehicleType> supportedVehicles;
     private OperationalStatus status;
     private ParkingSlotStatus slotStatus;
-    private ParkingSpotType spotType;
+    private ParkingSlotType spotType;
     private boolean isChargingAvailable;
     @ManyToOne
     private ParkingLevel level;
